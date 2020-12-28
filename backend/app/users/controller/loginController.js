@@ -1,7 +1,8 @@
-const { validate, User } = require('../models/usersM');
-const { SECRET } = require('../../../config/config');
 const jwt = require("jsonwebtoken");
 const bcrypt = require('bcrypt');
+const { validate, User } = require('../models/usersM');
+const { SECRET } = require('../../../config/config');
+
 
 module.exports.login = async (req, res) => {
 
