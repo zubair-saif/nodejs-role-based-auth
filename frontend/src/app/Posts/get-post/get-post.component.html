@@ -1,0 +1,24 @@
+
+<div class="container my-2 ml-auto w-100 ">
+  <h1>All Post</h1>
+  <hr>
+  <input class="form-control" type="text" [(ngModel)]="title" (input)="Search()" placeholder="Search by Name">
+</div>
+
+<br>
+<div class="container mx-auto row my-auto">
+  <div class="col-lg-4 col-md-4" *ngFor="let post of posts">
+    <div class="card my-3">
+      <img class="card-img-top" [src]="post?.imagePath" alt="post?.title">
+      <div class="card-body">
+        <h4 class="card-title">{{ post?.title }}</h4>
+        <p class="card-text">{{post.description}}</p>
+        <!-- <p class="card-text">tag : {{ post?.pages }}</p> -->
+        <a [routerLink]="['/details', post?._id]" class="btn btn-primary">Read More</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container text-center mx-auto row" *ngIf="posts.length <= 0 ">
+  <p class="text-center">No Results Found!! </p> </div>
