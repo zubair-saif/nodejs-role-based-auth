@@ -13,8 +13,8 @@ import { AdminGetComponent } from './Posts/admin-get/admin-get.component';
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   {path:'signup',component:SignupComponent},
-  { path: '', component: HomepageComponent },
-  { path: 'list', component: GetPostComponent },
+  // { path: '', component: HomepageComponent },
+  { path: '', component: GetPostComponent },
   {
     path: 'admin',canActivate: [AuthGuard], component: AdminGetComponent,
     children: [
@@ -22,7 +22,7 @@ const routes: Routes = [
     ]
   },
   { path: 'details/:ID', component: DetailsPostComponent },
-  { path: 'create', component: CreatePostComponent, canActivate: [AuthGuard] },
+  { path: 'create', component: CreatePostComponent, canActivate: [AuthGuard],data: {roles: ['SuperAdmin']} },
   { path: 'edit/:ID', component: CreatePostComponent, canActivate: [AuthGuard] }
 ];
 
