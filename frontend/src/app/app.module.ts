@@ -15,10 +15,13 @@ import { AuthInterceptor } from './auth/auth-interceptor';
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { AdminGetComponent } from './Posts/admin-get/admin-get.component';
+// import { MyLibModule } from 'my-lib';
+// import { MyLibComponent } from 'my-lib/lib/my-lib.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    // MyLibComponent,
     CreatePostComponent,
     DetailsPostComponent,
     GetPostComponent,
@@ -33,10 +36,11 @@ import { AdminGetComponent } from './Posts/admin-get/admin-get.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    // MyLibModule
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })

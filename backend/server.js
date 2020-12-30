@@ -16,7 +16,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
 
-require('./app/media/routesDefinations/mediaRoutesDefs')(app);
 require('./app/users/routesDefinations/userRouteDef')(app);
 require('./app/post/routesDefinations/postRouteDef')(app);
 
