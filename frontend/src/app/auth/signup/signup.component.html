@@ -1,16 +1,2 @@
-<div class="container my-5">
-  <div class="spinner-border" *ngIf="isLoading"></div>
-<div class="container" *ngIf="isfalse && !isLoading">
-  <p>Account Created., You can Login now!! </p>
-</div>
-    <form (submit)="onSignup(signupForm)" #signupForm="ngForm" *ngIf="!isLoading">
-      <div class="form-group">
-        <input class="form-control" name="email" ngModel type="email" placeholder="Type email" #emailInput="ngModel" required email>
-       </div>
-       <div class="form-group">
-        <input class="form-control" type="password" name="password" ngModel matInput placeholder="Type Password" #passwordInput="ngModel" required>
-       </div>
-      <button class="btn btn-primary" type="submit" *ngIf="!isLoading">signup</button>
-    </form>
-  </div>
 
+ <lib-signup-auth></lib-signup-auth>

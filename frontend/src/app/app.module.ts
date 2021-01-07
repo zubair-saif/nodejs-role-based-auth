@@ -6,30 +6,24 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CreatePostComponent } from './Posts/create-post/create-post.component';
-import { DetailsPostComponent } from './Posts/details-post/details-post.component';
-import { GetPostComponent } from './Posts/get-post/get-post.component';
-import { HomepageComponent } from './homepage/homepage.component';
-import { NavbarComponent } from './navbar/navbar.component';
+import { NavbarComponent } from './menu/navbar.component';
 import { AuthInterceptor } from './auth/auth-interceptor';
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
-import { AdminGetComponent } from './Posts/admin-get/admin-get.component';
-// import { MyLibModule } from 'my-lib';
-// import { MyLibComponent } from 'my-lib/lib/my-lib.component';
+import { AdminGetComponent } from './admin/admin-get/admin-get.component';
+
+import { AuthModule } from 'auth';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    // MyLibComponent,
-    CreatePostComponent,
-    DetailsPostComponent,
-    GetPostComponent,
-    HomepageComponent,
     NavbarComponent,
     LoginComponent,
     SignupComponent,
-    AdminGetComponent
+    AdminGetComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -37,7 +31,8 @@ import { AdminGetComponent } from './Posts/admin-get/admin-get.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    // MyLibModule
+    AuthModule,
+    BrowserAnimationsModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }

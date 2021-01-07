@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from './auth/auth.service';
+import {MenuItem} from 'primeng/api';
 
 @Component({
   selector: 'app-root',
@@ -7,11 +8,36 @@ import { AuthService } from './auth/auth.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'Post';
-
+  title = '';
+  items: MenuItem[];
   constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
     this.authService.autoAuthUser();
+
+    this.items = [
+      {
+          label:'Home',
+          icon:'pi pi-fw pi-file',
+         
+      },
+      {
+          label:'About',
+          icon:'pi pi-fw pi-pencil',
+         
+      },
+      {
+          label:'Blog',
+          icon:'pi pi-fw pi-user',
+          
+      },
+      {
+          label:'Contact',
+          icon:'pi pi-fw pi-calendar',
+      },
+      
+  ];
+   
+
   }
 }
