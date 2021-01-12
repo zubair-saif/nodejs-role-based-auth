@@ -10,10 +10,13 @@ import { NavbarComponent } from './menu/navbar.component';
 import { AuthInterceptor } from './auth/auth-interceptor';
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
-import { AdminGetComponent } from './admin/admin-get/admin-get.component';
+import { AdminGetComponent } from './admin/admin-get.component';
 
 import { AuthModule } from 'auth';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HomeComponent } from './component/home/home.component';
+import { AboutComponent } from './component/about/about.component';
+import { ContactComponent } from './component/contact/contact.component';
 
 
 @NgModule({
@@ -23,7 +26,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     LoginComponent,
     SignupComponent,
     AdminGetComponent,
-    
+    HomeComponent,
+    AboutComponent,
+    ContactComponent,
+
   ],
   imports: [
     BrowserModule,
