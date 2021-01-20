@@ -39,7 +39,6 @@ export class AppComponent implements OnInit {
         icon: 'pi pi-fw pi-calendar',
         routerLink: 'contact'
       },
-
     ];
   }
 }
