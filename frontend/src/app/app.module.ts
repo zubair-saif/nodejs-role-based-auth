@@ -17,6 +17,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './component/home/home.component';
 import { AboutComponent } from './component/about/about.component';
 import { ContactComponent } from './component/contact/contact.component';
+import { LayoutModule } from 'layout';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { ContactComponent } from './component/contact/contact.component';
     FormsModule,
     ReactiveFormsModule,
     AuthModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    LayoutModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
